@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/board.css' %}">
+
+{%  endblock %}
+
+
+{% block title %}
+board
+{% endblock %}
+
+
+
+{% block content %}
+<h3 class="brd">{{board.name}}</h3>
+{% if board.user == request.user %}    
+
+<div class="sectionn">
+
+    <a href="/editboard/{{board.id}}">
+        <div class="edit">
+       
+            <h4>Edit Board</h4>
+        </div>
+    
+    </a>
+    <a href="/deleteboard/{{board.id}}">
+        <div class="edit">
+       
+            <h4>Delete Board</h4>
+        </div>
+    
+    </a>
+
+</div>
+{% endif %}
+
+
+
+<div class="pins">
+        
+    {% for i in pins %}
+
+    
+
+    <a href="/viewpin/{{i.id}}">
+        <div class="card" style="display:inline-flex;width: 200px;border-radius:50px;border:none;margin-top:5px;margin-left:10px;">
+            <img class="card-img-top" src="{{i.image.url}}" style="border-radius: 50px;width: 200px;" alt="Card image cap">
+            <button >Save</button>
+            <div class="card-body">
+             
+              <a href="#">
+                <h5 class="card-title">{{i.title}}</h5>
+              </a>
+              <a href=""></a>
+              
+              
+            </div>
+          </div>
+    </a>
+    
+
+   {% endfor %}
+
+
+</div>
+
+
+{% endblock %}

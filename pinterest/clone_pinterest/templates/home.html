@@ -1,0 +1,655 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <title>
+     Pinterest
+    </title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+ 
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top" style="background-color: white !important;padding-top:20px;padding-left:30px;padding-right:30px;box-sizing:border-box;">
+      
+      <a class="navbar-brand" href="/" style="width: 200px;display:flex;flex-direction:row;text-decoration: none;">
+            <!-- <i class="fa-brands fa-pinterest" style="color:#e51010;font-size:36px;"></i> -->
+            <img src="{% static 'img/logo.png' %}" style="width:42px;height:40px;">
+            <h1 style="color:#e51010;font-family: 'Roboto', sans-serif;font-size:20px;margin-left:5px;margin-top:8px;font-weight: 500;">Pinterest</h1>
+        </a>
+       
+        <div class="collapse navbar-collapse" id="navbarNav" >
+          <ul class="navbar-nav ul_list" >
+            <li class="nav-item active">
+              <a class="nav-link li1" href="/about" >About<span class="sr-only">(current)</span></a>
+            </li>
+       
+              <li class="nav-item active">
+                <a class="nav-link li1" href="/press" >Press<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link li2" href="/login" >Login<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link li3" href="/signup" >Sign up<span class="sr-only">(current)</span></a>
+              </li>
+            
+          </ul>
+        </div>
+      </nav>
+
+
+      <div class="tab1">
+
+       <div class="textslides">
+
+        <h1>Get your next</h1>
+        <!-- <div class="card" style="width: 600px;border-radius: 0px;height: 100px;margin:auto;border:none;">
+
+          <div id="carouselExampleSlidesOnly" class="vertical carousel slide " style="border-radius: 25px;" data-interval="10000"  data-ride="carousel">
+              <div class="carousel-inner"  >
+                <div class="carousel-item active">
+                  <img class="d-block w-100 card-img-top" style="width: 600px !important;border-radius: 0px;height: 75px !important;margin-top:10px;" src="{% static 'img/chai text.jpg' %}" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top"style="width: 600px !important;border-radius: 0px;height: 75px !important;margin-top:10px;" src="{% static 'img/decor text.jpg' %}" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top" style="width: 600px !important;border-radius: 0px;height: 75px !important;margin-top:10px;" src="{% static 'img/baking text.jpg' %}" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top" style="width: 600px !important;border-radius: 0px;height: 75px !important;margin-top:10px;" src="{% static 'img/diy text.jpg' %}" alt="Third slide">
+                </div>
+                
+              </div>
+            </div>
+     
+        </div> -->
+
+
+        <div class="card" >
+        <div id="carouselExampleSlidesOnly" class="vertical carousel slide " data-interval="5000"  data-ride="carousel">
+          <ol class="carousel-indicators" style="width:max-content;height:30px;margin: auto;margin-top: 100px;margin-right: 255px;" >
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active " style="border-radius: 50% !important;width:10px !important;height:10px;"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"  style="border-radius: 50% !important;width:10px !important;height:10px;margin-left:10px"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"  style="border-radius: 50% !important;width:10px !important;height:10px;margin-left:10px"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"style="border-radius: 50% !important;width:10px !important;height:10px;margin-left:10px"></li>
+          </ol>
+          <div class="carousel-inner"  >
+            <div class="carousel-item active">
+              <img class="d-block w-100 card-img-top" style="width: 600px !important;border-radius: 0px;height: 75px !important;margin-top:10px;" src="{% static 'img/chai text.jpg' %}" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100 card-img-top"style="width: 600px !important;border-radius: 0px;height: 75px !important;margin-top:10px;" src="{% static 'img/decor text.jpg' %}" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100 card-img-top" style="width: 600px !important;border-radius: 0px;height: 75px !important;margin-top:10px;" src="{% static 'img/baking text.jpg' %}" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100 card-img-top" style="width: 600px !important;border-radius: 0px;height: 75px !important;margin-top:10px;" src="{% static 'img/diy text.jpg' %}" alt="Third slide">
+            </div>
+            
+          </div>
+
+        
+        </div>
+      </div>
+
+
+       </div>
+
+
+
+        
+<!-- 
+        {% for i in cards %}
+        <div class="card" style="width: 250px;border-radius: 25px;height: 360px;margin-top:30px;">
+
+            <div id="carouselExampleSlidesOnly" class="vertical carousel slide " style="border-radius: 25px;" data-interval="10000"  data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100 card-img-top" src="{{i.image1.url}}" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100 card-img-top" src="{{i.image2.url}}" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100 card-img-top" src="{{i.image3.url}}" alt="Third slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100 card-img-top" src="{{i.image4.url}}" alt="Third slide">
+                  </div>
+                  
+                </div>
+              </div>
+       
+          </div>
+         
+          <br>
+          <br>
+          <br>
+        {% endfor %} -->
+
+
+
+        <div class="previewx">
+        
+        <div class="card1" style="width: 250px;border-radius: 25px;height: 360px;">
+
+          <div id="carouselExampleSlidesOnly" class="vertical carousel slide " style="border-radius: 25px;" data-interval="5000"  data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/chai/1.jpg' %}" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/decor/1.jpg' %}" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/baking/1.jpg' %}" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/diy/1.jpg' %}" alt="Third slide">
+                </div>
+                
+              </div>
+            </div>
+     
+        </div>
+
+
+        <div class="card2" >
+
+          <div id="carouselExampleSlidesOnly" class="vertical carousel slide " style="border-radius: 25px;" data-interval="5000"  data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/chai/2.jpg' %}" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/decor/2.jpg' %}" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/baking/2.jpg' %}" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/diy/2.jpg' %}" alt="Third slide">
+                </div>
+                
+              </div>
+            </div>
+     
+        </div>
+
+
+        <div class="card3" >
+
+          <div id="carouselExampleSlidesOnly" class="vertical carousel slide " style="border-radius: 25px;" data-interval="5000"  data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/chai/3.jpg' %}" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/decor/3.jpg' %}" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/baking/3.jpg' %}" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/diy/3.jpg' %}" alt="Third slide">
+                </div>
+                
+              </div>
+            </div>
+     
+        </div>
+
+
+        <div class="card4" >
+
+          <div id="carouselExampleSlidesOnly" class="vertical carousel slide " style="border-radius: 25px;" data-interval="5000"  data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/chai/4.jpg' %}" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/decor/4.jpg' %}" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/baking/4.jpg' %}" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/diy/4.jpg' %}" alt="Third slide">
+                </div>
+                
+              </div>
+            </div>
+     
+        </div>
+
+
+        <div class="card5" >
+
+          <div id="carouselExampleSlidesOnly" class="vertical carousel slide " style="border-radius: 25px;" data-interval="5000"  data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/chai/5.jpg' %}" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/decor/5.jpg' %}" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/baking/5.jpg' %}" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/diy/5.jpg' %}" alt="Third slide">
+                </div>
+                
+              </div>
+            </div>
+     
+        </div>
+
+
+        <div class="card6" >
+
+          <div id="carouselExampleSlidesOnly" class="vertical carousel slide " style="border-radius: 25px;" data-interval="5000"  data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/chai/6.jpg' %}" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/decor/6.jpg' %}" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/baking/6.jpg' %}" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/diy/6.jpg' %}" alt="Third slide">
+                </div>
+                
+              </div>
+            </div>
+     
+        </div>
+
+
+        <div class="card7" style="width: 250px;border-radius: 25px;height: 360px;">
+
+          <div id="carouselExampleSlidesOnly" class="vertical carousel slide " style="border-radius: 25px;" data-interval="5000"  data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/chai/7.jpg' %}" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/decor/7.jpg' %}" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/baking/7.jpg' %}" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100 card-img-top" src="{% static 'img/diy/7.jpg' %}" alt="Third slide">
+                </div>
+                
+              </div>
+            </div>
+     
+        </div>
+
+
+        <div class="btmcards">
+          <div class="card8" >
+
+            <div id="carouselExampleSlidesOnly" class="vertical carousel slide " style="border-radius: 25px;" data-interval="5000"  data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100 card-img-top" src="{% static 'img/chai/8.jpg' %}" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100 card-img-top" src="{% static 'img/decor/8.jpg' %}" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100 card-img-top" src="{% static 'img/baking/8.jpg' %}" alt="Third slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100 card-img-top" src="{% static 'img/diy/8.jpg' %}" alt="Third slide">
+                  </div>
+                  
+                </div>
+              </div>
+       
+          </div>
+  
+          <div class="card9" >
+  
+            <div id="carouselExampleSlidesOnly" class="vertical carousel slide " style="border-radius: 25px;" data-interval="5000"  data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100 card-img-top" src="{% static 'img/chai/9.jpg' %}" alt="First slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100 card-img-top" src="{% static 'img/decor/9.jpg' %}" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100 card-img-top" src="{% static 'img/baking/9.jpg' %}" alt="Third slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100 card-img-top" src="{% static 'img/diy/9.jpg' %}" alt="Third slide">
+                  </div>
+                  
+                </div>
+              </div>
+       
+          </div>
+
+        </div>
+  
+        
+      </div>  
+        
+     
+
+
+
+
+
+      </div>
+      <div class="white">
+        <img src="{% static 'img/w3.png' %}" alt="">
+       
+      </div>
+
+      <a href="#tab2">
+        <div class="anim">
+        <div class="circ">
+          <i class="fa-solid fa-chevron-down arw1" style="color: #ffffff;"></i>
+        </div>
+      </div>
+      </a>
+
+      <div class="tab2" id="tab2">
+          <div class="txt_work">
+            <h3>Here’s how it works</h3>
+            <i class="fa-solid fa-chevron-down arw2" style="color: #000000;"></i>
+          </div>
+
+          <div class="hor1">
+            <a href="/board/44">
+            <div class="sec1">
+              <img  class="img1" src="{% static 'img/tab2/1.jpg' %}" alt="">
+              <img  class="img2" src="{% static 'img/tab2/2.jpg' %}" alt="">
+              <img  class="img3" src="{% static 'img/tab2/3.jpg' %}" alt="">
+              <img  class="img4" src="{% static 'img/tab2/4.jpg' %}" alt="">
+              <div class="search1">
+                <i class="fa-solid fa-magnifying-glass mggls" style="color: #030303;"></i>
+                <h2>easy chicken dinner</h2>
+              </div>
+            </div>
+          </a>
+    
+            <div class="sec2">
+    
+              <h1>Search for an idea</h1>
+              <h3>What do you want to try next? Think <br>of something you’re into – such as <br> 'easy chicken dinner' – and see what <br> you find.</h3>
+              
+              <form action="/board/2" class="inline">
+                <button class="btn btn-primary explr">Explore</button>
+              </form>
+            </div>
+            
+
+
+
+
+          </div>
+        
+
+        
+
+
+
+
+
+
+      </div>
+
+      <div class="tab3">
+        <div class="hor2">
+          <div class="s1">
+            <h1>Save ideas you like</h1>
+              <h3>Collect your favourites so you can <br>get back to them later.</h3>
+              <form action="/board/10" class="inline">
+                <button class="btn btn-primary explr">Explore</button>
+              </form>
+              
+
+          </div>
+          <a href="/board/10">
+          <div class="s2">
+            <div class="fern">
+              <div class="fernimg">
+                <img  class="imga" src="{% static 'img/tab3/fern/1.jpg' %}" alt="">
+                <img  class="shadow" src="{% static 'img/tab3/b.png' %}" alt="">
+                <img  class="imgb" src="{% static 'img/tab3/fern/2.jpg' %}" alt="">
+                <img  class="imgc" src="{% static 'img/tab3/fern/3.jpg' %}" alt="">
+                <img  class="imgd" src="{% static 'img/tab3/fern/4.jpg' %}" alt="">
+              </div>
+              <h2>Fern future <br>home vibes</h2>
+            
+            </div>
+            <div class="bed">
+              <img src="{% static 'img/tab3/bed.jpg' %}" alt="">
+              <h3>My Cozy <br>Bedroom</h3>
+            </div>
+            <div class="deck">
+              <img src="{% static 'img/tab3/deck.jpg' %}" alt="">
+              <h3>The decking <br>of my dreams</h3>
+            </div>
+            <div class="jug">
+              <img src="{% static 'img/tab3/jug.jpg' %}" alt="">
+              <h3>Serve my <br>drinks in <br>style</h3>
+            </div>
+            <div class="bath">
+              <img src="{% static 'img/tab3/bath.jpg' %}" alt="">
+              <h3>Our <br>Bathroom</h3>
+            </div>
+  
+          </div>
+        </a>
+        </div>
+        
+
+      </div>
+
+      <div class="tab4">
+
+        <div class="hor4">
+          <div class="seca">
+            <a href="/board/42">
+              <img src="{% static 'img/tab4/1.jpg' %}" alt="">
+
+            </a>
+            
+          
+          </div>
+  
+          <div class="secb">
+  
+            <h1>See it, make it,<br> try it, do it</h1>
+            <h3>The best part of Pinterest is discovering <br>new things and ideas from people <br>around the world.</h3>
+            <form action="/board/41" class="inline">
+              <button class="btn btn-primary explr">Explore</button>
+            </form>
+            
+          </div>
+          
+
+
+
+
+        </div>
+        
+      </div>
+
+      <div class="tab5">
+
+
+        <div class="prev">
+          <div class="c1">
+         
+              <img class="c1img" src="{% static 'img/tab5/1.jpg' %}" alt="">
+              <img class="c1img" src="{% static 'img/tab5/2.jpg' %}" alt="">
+              <img class="c1img" src="{% static 'img/tab5/3.jpg' %}" alt="">
+             
+              
+          </div>
+          <div class="c2">
+         
+            <img class="c1img" src="{% static 'img/tab5/7.jpg' %}" alt="">
+            <img class="c1img" src="{% static 'img/tab5/4.jpg' %}" alt="">
+            <img class="c1img" src="{% static 'img/tab5/5.jpg' %}" alt="">
+           
+            
+        </div>
+        <div class="c1">
+         
+          <img class="c1img" src="{% static 'img/tab5/8.jpg' %}" alt="">
+          <img class="c1img" src="{% static 'img/tab5/9.jpg' %}" alt="">
+          <img class="c1img" src="{% static 'img/tab5/10.jpg' %}" alt="">
+         
+          
+      </div>
+      <div class="c2">
+     
+        <img class="c1img" src="{% static 'img/tab5/11.jpg' %}" alt="">
+        <img class="c1img" src="{% static 'img/tab5/12.jpg' %}" alt="">
+        <img class="c1img" src="{% static 'img/tab5/21.jpg' %}" alt="">
+       
+        
+    </div>
+    <div class="c1">
+         
+      <img class="c1img" src="{% static 'img/tab5/14.jpg' %}" alt="">
+      <img class="c1img" src="{% static 'img/tab5/15.jpg' %}" alt="">
+      <img class="c1img" src="{% static 'img/tab5/16.jpg' %}" alt="">
+     
+      
+  </div>
+  <div class="c2">
+ 
+    <img class="c1img" src="{% static 'img/tab5/17.jpg' %}" alt="">
+    <img class="c1img" src="{% static 'img/tab5/18.jpg' %}" alt="">
+    <img class="c1img" src="{% static 'img/tab5/19.jpg' %}" alt="">
+   
+    
+</div>
+
+        </div>
+
+        <div class="blk">
+          <img src="{% static 'img/tab5/bb.png' %}" alt="">
+        </div>
+        <h1>Sign up to <br> get your <br> ideas</h1>
+
+        <div class="reg">
+          <form class="form"  method="post">
+
+            <img src="{% static 'img/logo.png' %}" style="width:42px;height:40px;">
+
+            <h2>Welcome to Pinterest</h2>
+            <h4>Find new ideas to try</h4>
+
+           
+        
+           {% csrf_token %}
+        
+            <label for="">Email address</label>
+            <input type="email" class="form-control" name="email" placeholder="Email address" required>
+            <label for="">Password</label>
+            <input type="password" class="form-control" name="password" placeholder="Create a Password" required>
+           
+         
+              <div class="btn1">
+                
+                <a href="/signup" class="button" >Continue</a>
+              
+            </div>
+
+
+              
+            
+
+            <h5>OR</h5>
+            <div class="btn2"  class="btn btn-outline-dark">
+              <img src="{% static 'img/tab5/fb.png' %}" alt="">
+              <h3>Continue with facebook</h3>
+              
+          </div>
+          <div class="btn3"  class="btn btn-outline-dark">
+            <img src="{% static 'img/tab5/g.png' %}" alt="">
+            <h3>Continue with Google</h3>
+            
+        </div>
+
+        <h6>By continuing, you agree to Pinterest's <br> Terms of Service  and acknowledge that you've read <br> our Privacy Policy.Notice at collection.</h6>
+        <div class="log">
+          <h6>Already a member?</h6>
+      
+          <a href="/login">Login</a>
+
+        </div>
+       
+            
+        
+        
+        
+        </form>
+
+        </div>
+
+      </div>
+
+
+        <div class="tab6">
+            <div class="tags">
+              <a href="">Terms of Service</a>
+              <a href="">Privacy Policy</a>
+              <a href="">Help</a>
+              <a href="">iPhone app</a>
+              <a href="">Android app</a>
+              <a href="">Users</a>
+              <a href="">Collections</a>
+              <a href="">Shopping</a>
+              <a href="">Today</a>
+              <a href="">Explore</a>
+              <a href="">Watch</a>
+              <a href="">Shop</a>
+            </div>
+         
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

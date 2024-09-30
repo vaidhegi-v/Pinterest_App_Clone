@@ -1,0 +1,87 @@
+body{
+    background-image: url('static/img/tab5/bb.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.cardb{
+    margin: auto;
+    width: 570px;
+    height: 721px;
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+
+
+}
+
+.frm h2{color: rgb(0, 0, 0);
+    font-size: 25px;
+    font-weight: 500;
+    font-family: sans-serif;
+    
+
+    width: max-content;
+    margin: auto;
+    margin-top: 25px !important;
+    
+
+
+}
+
+.frm label{
+    margin-left: 43px !important;
+    margin-top: 7px;
+}
+
+.frm input{
+    margin-top: 45px;
+    width: 74%;
+    height: 39px;
+    border-radius: 25px;
+    border: 1px solid rgb(197, 197, 197);
+    margin-left: 81px !important;
+    padding-left: 20px;
+    padding-top: 4px;
+    
+  
+
+
+
+}
+
+button{
+    width:80px !important;
+    border-radius: 45px !important;
+    background-color: #e51010 !important;
+    color: white !important;
+    margin-left: 420px;
+    margin-top: 40px;
+}
+
+.icn{
+    margin-left: 270px;
+    margin-top: 25px;
+
+}
+select{
+    border: none;
+    border-radius: 50px;
+    margin-left: 104px;
+    margin-top: 20px;
+}
+
+
+
+label {
+    display: block !important;
+    margin-bottom: -1.5rem !important;
+    margin-top: 20px !important;
+}
+
+option{
+    margin-top: 20px !important;
+}

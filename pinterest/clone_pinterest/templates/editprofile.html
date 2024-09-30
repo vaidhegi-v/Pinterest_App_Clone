@@ -1,0 +1,82 @@
+
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% load static %}
+   
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/addprofile.css' %}">
+
+{%  endblock %}
+
+
+{% block title %}
+add profile
+{% endblock %}
+
+
+{% block content %}
+
+
+
+
+
+
+<style>
+
+    
+    .form{
+        width:40% ;
+        margin: auto;
+
+    }
+    .form-control{
+        margin-top: 20px !important;
+        
+
+    }
+
+    .btn-2{
+        margin-top: 20px !important;
+        width: 100%;
+        margin-bottom: 20px;
+
+    
+    }
+</style>
+<div class="cardx">
+
+    <i class="fa-brands fa-pinterest icn" style="color:#e51010;font-size:36px;"></i>
+
+
+    <h1 style="width:max-content;margin:auto;font-family: sans-serif;margin-top:20px;margin-bottom:20px;font: size 35px;">Create Profile</h1>
+
+<form class="form" method="POST" enctype="multipart/form-data">
+
+{% for msg in messages %}
+
+        <div class="alert alert-danger" role="alert">
+            {{msg}}
+        </div>
+    
+    
+{% endfor %}
+
+{% csrf_token %}
+
+
+
+
+{% render_field form.profilename class="form-control" placeholder="Profile Name" %}
+{% render_field form.image class="form-control" placeholder="Profile Pic" %}
+
+
+
+<!-- {{form.as_p}} -->
+<input class="btn btn-dark" type="submit">
+
+</form>
+
+</div>
+
+{% endblock %}

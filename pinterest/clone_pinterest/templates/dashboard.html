@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+
+{%  endblock %}
+
+
+{% block title %}
+dashboard
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<div class="brds">
+  {% for i in board %}
+
+    {% if forloop.counter < 7 %}
+
+    <a href="/board/{{i.id}}">
+      <div class="card cht" >     
+        <h5 class="card-title">More ideas for <br>{{i.name}}</h5>
+      </div>
+    </a>
+
+    {% endif %}
+  
+ 
+  {% endfor %}
+
+
+</div>
+
+     
+    
+
+
+
+<div class="pins">
+        
+  {% for i in pins %}
+
+  
+
+  <a href="/viewpin/{{i.id}}">
+      <div class="card" style="display:inline-flex;width: 200px;border-radius:50px;border:none;margin-top:5px;margin-left:10px;">
+          <img class="card-img-top" src="{{i.image.url}}" style="border-radius: 50px;width: 200px;" alt="Card image cap">
+          {% if request.user != i.user %}
+          <!-- <form action="/savepin/{{p.id}}"> -->
+            
+            <button >Save</button>
+
+          <!-- </form> -->
+          
+          {% endif %}
+          <div class="card-body">
+
+           
+            <a href="#">
+              <h5 class="card-title">{{i.title}}</h5>
+            </a>
+            <a href=""></a>
+            
+            
+          </div>
+        </div>
+  </a>
+  
+
+ {% endfor %}
+
+
+</div>
+
+
+
+
+
+<nav aria-label="..." class="pagination1">
+  <ul class="pagination">
+    
+    {% if pins.has_previous %}
+      <li class="page-item ">
+        <a class="page-link" href="?page={{pins.previous_page_number}}" tabindex="-1">Previous</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="?page={{pins.previous_page_number}}">{{pins.previous_page_number}}</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1">Previous</a>
+      </li>
+    {% endif %}
+
+
+    <li class="page-item active">
+      <a class="page-link" href="?page={{pins.number}}">{{pins.number}} <span class="sr-only">(current)</span></a>
+    </li>
+
+    
+    {% if pins.has_next %}
+      <li class="page-item">
+        <a class="page-link" href="?page={{pins.next_page_number}}">{{pins.next_page_number}}</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="?page={{pins.next_page_number}}">Next</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    {% endif %}
+   
+  </ul>
+</nav>
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+   
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{%  endblock %}
+{% block title %}
+
+profile
+  {% endblock %}
+{% block content %}
+
+<div class="top">
+
+<img class="primg"   src="{{profile.image.url}}" alt="">
+<h3>{{user.first_name}} {{user.last_name}}</h3>
+<!-- <h4>{{user.username}}</h4> -->
+<h6>{{profile.user.email}}</h6>
+<div class="d1" style="width:max-content;margin:auto;">
+  <a  style="width:120px;height:57px;border-radius:30px;background-color:rgb(225 219 219);" href="/editprofile/{{profile.id}}"><h2 style="color:black;font-family:sans-serif;font-weight:400;font-size :16px;">Edit Profile</h2></a>
+
+</div>
+
+
+
+<h2>Boards Created </h2>
+</div>
+
+<a href="/allpins">
+  <div class="cardf" style="display:inline-flex;margin-left:32px;width: 260px;height:100px;border-radius:50px;border:none;background-color:rgb(225, 219, 219);">
+
+    <div class="card-text">
+        <h5 class="card-title txt1" style="margin-top: 35px !important;margin-left:85px;">All Pins</h5>
+    </div>
+  </div>
+
+
+
+</a>
+
+
+
+
+
+<div class="previewx">
+
+    
+
+
+    {% for i in boards %}
+
+    
+
+        <div class="card" style="display:inline-flex;width: 260px;height:200px;border-radius:50px;border:none;background-color:rgb(225, 219, 219);">
+          <div class="sec">
+            <div class="left">
+              <img class="card-img-top" src="/media/{{i.image1}}" style="border-radius: 50px 0px 0px 50px;border:none;width: 160px;height:200px !important;" onerror="this.style.display='none'">
+            </div>
+  
+            <div class="right">
+              <img class="card-img-top" src="/media/{{i.image2}}" style="border-radius: 0px 50px 0px 0px;border:none;width: 100px;height:100px !important;" onerror="this.style.display='none'">
+              <img class="card-img-top" src="/media/{{i.image3}}" style="border-radius: 0px 0px 50px 0px;border:none;width: 100px;height:100px !important;"onerror="this.style.display='none'" >
+  
+            </div>
+
+          </div>
+         
+            
+            
+            
+         
+            <div class="card-body">
+             
+              <a href="/board/{{i.id}}">
+                <h5 class="card-title">{{i.name}}</h5>
+              </a>
+            
+              
+              
+            </div>
+          </div>
+   
+    
+
+   {% endfor %}
+
+  
+
+  
+  
+  </div>
+  
+  
+
+
+
+
+{% endblock %}
+    
+  

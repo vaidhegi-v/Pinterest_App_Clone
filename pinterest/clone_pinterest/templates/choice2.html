@@ -1,0 +1,51 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+   
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/choice.css' %}">
+{%  endblock %}
+
+
+{% block title %}
+Create Board
+{% endblock %}
+
+
+{% block content %}
+
+<div class="cardb">
+    
+    <div class="frm" >
+
+        <i class="fa-brands fa-pinterest icn" style="color:#e51010;font-size:36px;"></i>
+
+        <a href="/addboard">
+            <h2>Create a new Board to save your pin</h2>
+        </a>
+        <h3>OR</h3>
+
+
+        <a href="/addpin">
+            <h2>Save Pin using existing Boards</h2>
+        </a>
+
+        
+    
+    
+        
+
+
+
+
+     
+        </form>
+
+</div>
+
+
+
+
+{% endblock %}

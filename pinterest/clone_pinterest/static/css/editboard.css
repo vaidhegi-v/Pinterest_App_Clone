@@ -1,0 +1,54 @@
+.cardb{
+    width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    
+   
+    height: 700px;
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding-left: 50px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.icn{
+    width: max-content;
+    margin-left:290px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.frm h2{
+    width: max-content;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+label{
+    margin-top: 25px;
+   
+}
+
+input{
+   
+/* 
+    height: 40px; */
+
+    border-radius: 25px;
+    padding-left: 25px;
+    border: 1px solid rgb(196, 193, 193);
+    /* padding-top: 5px; */
+
+}
+
+button{
+    width:100px !important;
+    border-radius: 45px !important;
+    background-color: #e51010 !important;
+    color: white !important;
+    margin-left: 500px;
+    margin-top: 50px;
+    height: 60px;
+}

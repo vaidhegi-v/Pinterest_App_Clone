@@ -1,0 +1,193 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    
+    {% block style %}
+    {% endblock %}
+    
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+ 
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: white !important;height:80px;">
+        <a class="navbar-brand" href="/dashboard">
+           <i class="fa-brands fa-pinterest" style="color:#e51010;font-size:36px;margin-left:20px;margin-top:10px;"></i>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto" style="margin-top: 25px;">
+            <li class="nav-item active">
+              <a class="nav-link" href="/dashboard">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/explore">Explore<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                
+                <a class="nav-link" href="/choice">Create<span class="sr-only">(current)</span></a>
+              </li>
+
+              <li>
+                <form action="/search" class="form-inline my-2 my-lg-0">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass fa-beat fa-sm" style="color: #babcbf;margin-left:22px;margin-top:8px;font-size:25px;"></i>
+                    <input class="form-control mr-sm-2 " name="sdata" type="search" placeholder="Search" aria-label="Search">
+                   
+                  </form>
+
+              </li>
+           
+            <li class="nav-item dropdown">
+              <a class="nav-link " href="/updates" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa-solid fa-bell fa-xl" style="color: #7b7c7c;margin-top:5px;margin-left:10px;"></i>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="overflow:auto;overflow-x:hidden">
+                <!-- <div class="over" style="overflow: scroll;overflow-x:hidden;padding:10px;"> -->
+                  <h6 style="width:max-content;margin: auto;">Updates</h6>
+                  <div class="dropdown-divider"></div>
+                  {% for i in update %}
+  
+                      <a class="dropdown-item" href="#">
+                        <div class="card bg-light mb-3" style="width: 350px;border-radius:20px;margin-top:5px !important;margin-bottom:5px !important;">
+                        <div class="card-header" style="width: 350px;border-radius:20px 20px 0px 0px;">
+                          <h5 style="font-size:15px;white-space: pre-wrap">{{i.update}}</h5></div>
+                        <div class="card-body" style="display: flex;flex-direction:row;width: 300px;">
+                          <img src="/media/{{i.image1}}" alt=""  onerror="this.style.display='none'" class="uc" style="width: 90px;border-radius:25px 0px 0px 25px;">
+                          <img src="/media/{{i.image2}}" alt=""  onerror="this.style.display='none'" class="uc" style="width: 90px;border-radius:0px;">
+                          <img src="/media/{{i.image3}}" alt="" onerror="this.style.display='none'" class="uc" style="width: 90px;border-radius:0px 25px 25px 0px;">
+                        </div>
+                      </div>
+  
+                        
+                        
+                  
+                      </a>
+                  {% endfor %}
+
+                <!-- </div> -->
+             
+                
+                
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa-solid fa-comment-dots fa-xl" style="color: #7b7c7c;margin-top:20px;margin-left:5px;"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="overflow:auto;overflow-x:hidden">
+                  <h6>Inbox</h6>
+                  <div class="dropdown-divider"></div>
+                  {% for i in message %}
+
+                    <a class="dropdown-item" href="#">
+                    
+                      <div class="card bg-light mb-3" style="width: 350px;border-radius:20px;margin-top:5px !important;margin-bottom:5px !important;">
+                        <div class="card-header" style="width: 350px;border-radius:20px 20px 0px 0px;">
+                          
+                          <img src="/media/{{i.image1}}" alt=""  onerror="this.style.display='none'" class="uc" style="width: 40px;border-radius:50%;">
+                          <h5 style="font-size:14px;white-space: pre-wrap;font-weight:600;font-family:sans-serif;margin-left:34px;margin-top:10px;">{{i.title}}</h5>
+                        </div>
+                        <div class="card-body" style="display: flex;flex-direction:row;width: 300px;">
+                        
+                            <h5 style="font-size:14px;white-space: pre-wrap;font-weight:400;font-family:sans-serif">{{i.message}}</h5>
+                        </div>
+                      </div>
+                    </a>
+                  {% endfor %}
+                
+                </div>
+              </li>
+              <li>
+                
+                    {% if user.profile %}
+                    <a href="/profile">
+                      <img src="{{user.profile.image.url}}" style="width:40px;height: 40px !important;border-radius:50px;margin-left:10px;" alt="profilepic">
+                    </a>
+                    {% else %}
+                    <a href="/addprofile">
+                      <img src="{% static 'img/1.jpg' %}"style="width:40px;height:40px !important;border-radius:50px;margin-top:1px;margin-left:5px;" alt="profilepic">
+                    </a>
+                    {% endif %}
+                
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa-solid fa-chevron-down fa-xl" style="color: #676666;font-size:20px;"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">
+                    {% if user.profile %}
+                    <a href="/profile">
+                      
+                      <img src="{{user.profile.image.url}}" style="width:40px;height: 40px !important;border-radius:50px;margin-left:177px;" alt="profilepic">
+                      <h6 style="text-align: left;color:black;    margin-left: 175px;">{{user.username}}</h6>
+                      
+                    
+                    </a>
+                    {% else %}
+                    <a href="/addprofile">
+                      <img src="{% static 'img/1.jpg' %}"style="width:40px;height:40px !important;border-radius:50px;margin-top:1px;margin-left:177px;" alt="profilepic">
+                    </a>
+                    {% endif %}
+
+
+
+                  </a>
+                  <a href="/editprofile/{{user.id}}"><h6 style="text-align: left;color:black; margin-left: 145px;">Edit your profile</h6></a>
+                 
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Settings</a>
+                  <a class="dropdown-item" href="#">Install the Windows App</a>
+                  <a class="dropdown-item" href="#">Tune your home feed</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Get Help</a>
+                  <a class="dropdown-item" href="#">Privacy Policy</a>
+                  <a class="dropdown-item" href="#">Terms of Service</a>
+                  <div class="dropdown-divider"></div>
+                
+                  <a class="dropdown-item" href="/logout">Logout</a>
+                </div>
+              </li>
+            
+          </ul>
+        
+        </div>
+      </nav>
+
+     
+
+
+      {% block content %}
+
+
+
+
+      {% endblock %}
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+body{
+
+    padding: 0px;
+    margin: 0px;
+   
+  }
+  
+  .ul_list{
+      margin-left: 1020px;
+      width: 200px;
+      /* background-color: beige; */
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+  }
+  .li1{
+      font-family:'Roboto', sans-serif;
+      font-size:16px;
+      font-weight:500;
+      margin-top:8px;
+      width:80px;
+      text-align: center;
+      text-decoration: none;
+      margin-top:8px;
+  }
+  .li2{
+      font-family:'Roboto', sans-serif;
+      font-size:16px;
+      font-weight:500;
+      margin-top:8px;
+      background-color:#ffffff;
+      border-radius:20px;
+      color:rgb(0, 0, 0) !important;
+      width:80px;
+      text-align: center;
+      text-decoration: none;
+    
+  }
+  .li3{
+      font-family:'Roboto', sans-serif;
+      font-size:16px;
+      font-weight:500;
+      margin-top:8px;
+      background-color:#ffffff;
+      border-radius:20px;
+      color:rgb(0, 0, 0);
+      width:80px;
+      text-align: center;
+      text-decoration: none;
+      
+  }
+
+  .div_1{
+    background-color:#ffebf1;
+    width: 100%;
+    height: 800px;
+    padding: 0px;
+  }
+  
+  .n1{
+    display: flex;
+    flex-direction: row;
+    
+    width: max-content;
+    margin: auto;
+    padding-top: 220px;
+
+  }
+
+  .s1{
+    width: max-content;
+    margin: auto;
+  }
+
+  .s1 h1{
+    color: rgb(15, 15, 15);
+    font-size: 48px;
+    font-weight: 400;
+    font-family:sans-serif;
+    text-align: center;
+  }
+
+  .s2{
+    width: max-content;
+    margin: auto;
+
+  }
+
+  .s2 img{
+    width: 650px;
+  }
+
+  .btn_read{
+    width: 150px;
+    height: 80px;
+    border: 3px solid black;
+    border-radius: 70px;
+    box-sizing: border-box;
+    margin: auto;
+  }
+
+  .btn_read h3{
+    color: rgb(15, 15, 15);
+    font-size: 20px;
+    font-weight: 600;
+    font-family:sans-serif;
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  .press{
+   
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 100px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 100px;
+    justify-content: space-evenly
+    
+   
+
+}
+
+
+.footr{
+  width: 100%;
+  height: 100px;
+  background-color:#000000;
+}
+.card-body h3{
+  font-size: 15px;
+  font-weight: 400;
+  font-family:sans-serif;
+  text-align: center;
+  color: #000;
+
+
+
+}
+
+
+
+.card-title{
+  font-size: 28px;
+  font-weight: 500;
+  font-family:sans-serif;
+  text-align: center;
+  color: #000;
+
+}

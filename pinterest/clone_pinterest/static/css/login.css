@@ -1,0 +1,282 @@
+
+
+
+
+
+
+
+body{
+
+    padding: 0px;
+    margin: 0px;
+   
+  }
+  
+  .ul_list{
+      margin-left: 820px;
+      width: 500px;
+      /* background-color: beige; */
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+  }
+  .li1{
+      font-family:'Roboto', sans-serif;
+      font-size:16px;
+      font-weight:500;
+      margin-top:8px;
+      width:80px;
+      text-align: center;
+      text-decoration: none;
+      margin-top:8px;
+  }
+  .li2{
+      font-family:'Roboto', sans-serif;
+      font-size:16px;
+      font-weight:500;
+      margin-top:8px;
+      background-color:#e51010;
+      border-radius:20px;
+      color:white !important;
+      width:80px;
+      text-align: center;
+      text-decoration: none;
+    
+  }
+  .li3{
+      font-family:'Roboto', sans-serif;
+      font-size:16px;
+      font-weight:500;
+      margin-top:8px;
+      background-color:#e5e4ed;
+      border-radius:20px;
+      color:rgb(0, 0, 0);
+      width:80px;
+      text-align: center;
+      text-decoration: none;
+      
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form input{
+    width: 50%;
+    border-radius: 20px;
+        
+    }
+    
+    .form{
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        
+        margin-top: 20px;
+    }
+
+.reg{
+    width: 800px;
+    height: 700px;
+    background-color: white;
+    border-radius: 50px;
+    margin: auto;
+
+   display: flex;
+   flex-direction: column;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   margin-top: 50px;
+   margin-bottom: 50px;
+   padding-top: 45px;
+
+  
+  
+  
+  }
+  form img{
+
+    margin-top: 10px;
+    margin: auto;
+  }
+  input{
+    width: 300px !important;
+    height: 50px;
+    border-radius: 25px !important;
+    margin:auto;
+  }
+  
+  .tags{
+    width: max-content;
+    margin-left: 500px;
+    margin-top: 15px;
+  }
+  
+  .tags a{
+
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 15px;
+    
+    
+  } 
+  
+  form h2{
+    width: max-content;
+    margin: auto;
+    color: #000;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+  }
+  
+  form h4{
+    width: max-content;
+    margin: auto;
+    color: #3b3737;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+  }
+  label{
+   margin-left:250px;
+   margin-top: 10px;
+  }
+  
+  .btn1{
+    width: 300px;
+    background-color: #e51010;
+    height: 50px;
+    border-radius: 30px;
+    margin:auto;
+    border: none;
+    margin-top: 10px;
+  
+  }
+  
+  .reg button{
+    border: none;
+    width: 250px;
+    color: white;
+    height: 50px;
+    margin-left: 26px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+  
+  }
+  
+  h5{
+    width: max-content;
+    margin: auto;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+    margin-top: 10px;
+  }
+  .btn2{
+    width: 300px;
+    background-color: #5278ba;
+    height: 50px;
+    border-radius: 30px;
+    margin:auto;
+    border: none;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+  
+  }
+  
+  .btn2 h3{
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+
+    margin-top: 17px;
+    margin-right: 65px;
+  }
+  .btn2 img{
+    width: 28px;
+    border-radius: 60%;
+    margin-left: 34px;
+    height: 28px;
+    margin-top: 11px;
+  }
+  
+  .btn3{
+    width: 300px;
+    background-color: #feffff;
+    height: 50px;
+    border-radius: 30px;
+    margin:auto;
+    border: none;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    border: 1px #000;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
+  }
+  
+  .btn3 h3{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 65px;
+    margin-top: 17px;
+  }
+  .btn3 img{
+    width: 28px;
+    border-radius: 60%;
+    margin-left: 34px;
+    height: 28px;
+    margin-top: 11px;
+  }
+  h6{
+    text-align: center;
+    width: max-content;
+    margin: auto;
+    color: rgb(15, 15, 15);
+    font-size: 11px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 5px;
+  }
+  
+  .reg a,h6{
+    text-align: center;
+    width: max-content;
+    margin: auto;
+    color: rgb(15, 15, 15);
+    font-size: 11px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    
+  }
+  
+  .log{
+    display: flex;
+    flex-direction: row;
+  
+  }

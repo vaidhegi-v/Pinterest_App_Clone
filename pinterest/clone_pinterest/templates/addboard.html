@@ -1,0 +1,45 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+   
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/addboard.css' %}">
+{%  endblock %}
+
+
+{% block title %}
+Create Board
+{% endblock %}
+
+
+{% block content %}
+
+<div class="cardb">
+    
+    <form method="POST" class="frm" enctype="multipart/form-data" >
+         <i class="fa-brands fa-pinterest icn" style="color:#e51010;font-size:36px;"></i>
+
+        <h2>Create Board</h2>
+    
+        {% csrf_token %}
+        {{form}}
+
+        <!-- <input type="checkbox" id="boolean" name="boolean" value="private">
+        <label for="boolean"> Keep this board secret</label><br> -->
+        <a href="/addpin"><button class="form-control" type="submit">Create</button>
+        </a>
+        
+
+
+
+     
+        </form>
+
+</div>
+
+
+
+
+{% endblock %}

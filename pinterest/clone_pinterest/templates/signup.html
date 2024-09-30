@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    <title>
+     Pinterest
+    </title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+ 
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top" style="background-color: white !important;padding-top:20px;padding-left:30px;padding-right:30px;box-sizing:border-box;">
+      
+      <a class="navbar-brand" href="/" style="width: 200px;display:flex;flex-direction:row;text-decoration: none;">
+            <!-- <i class="fa-brands fa-pinterest" style="color:#e51010;font-size:36px;"></i> -->
+            <img src="{% static 'img/logo.png' %}" style="width:42px;height:40px;">
+            <h1 style="color:#e51010;font-family: 'Roboto', sans-serif;font-size:20px;margin-left:5px;margin-top:8px;font-weight: 500;">Pinterest</h1>
+        </a>
+       
+        <div class="collapse navbar-collapse" id="navbarNav" >
+          <ul class="navbar-nav ul_list" >
+            <li class="nav-item active">
+              <a class="nav-link li1" href="/about" >About<span class="sr-only">(current)</span></a>
+            </li>
+     
+              <li class="nav-item active">
+                <a class="nav-link li1" href="/press" >Press<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link li2" href="/login" >Login<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link li3" href="/signup" >Sign up<span class="sr-only">(current)</span></a>
+              </li>
+            
+          </ul>
+        </div>
+      </nav>
+
+      
+
+
+
+    <div class="reg">
+        <form class="form"  method="post">
+        {% for msg in messages %}
+            <div class="alert alert-danger" role="alert" style="width: 500px;text-align: center;margin-bottom: 20px;margin: auto;">
+                {{msg}}
+            </div>
+            
+        {% endfor %}
+        {% csrf_token %}
+
+          <img src="{% static 'img/logo.png' %}" style="width:42px;height:40px;">
+
+          <h2>Welcome to Pinterest</h2>
+          <h4>Find new ideas to try</h4>
+
+         
+      
+          <label for="">Username</label> 
+          
+          <input type="text" class="form-control" name="username" placeholder="Username" required>
+          <label for="">Firstname</label> 
+          
+          <input type="text" class="form-control" name="firstname" placeholder="Firstname" required>
+          <label for="">Lastname</label>
+          <input type="text" class="form-control" name="lastname" placeholder="Lastname" required>
+          <label for="">Email address</label>
+          <input type="email" class="form-control" name="email" placeholder="Email address" required>
+          <label for="">Password</label>
+          <input type="password" class="form-control" name="password1" placeholder="Create a Password" required>
+          <label for="">Confim password</label>
+          <input type="password" class="form-control" name="password2" placeholder="Confirm Password" required>
+          
+      
+          <div class="btn1">
+              <button  type="submit" class="btn btn-outline-dark" >Continue</button>
+          </div>
+
+          <h5>OR</h5>
+          <div class="btn2"  class="btn btn-outline-dark">
+            <img src="{% static 'img/tab5/fb.png' %}" alt="">
+            <h3>Continue with facebook</h3>
+            
+        </div>
+        <div class="btn3"  class="btn btn-outline-dark">
+          <img src="{% static 'img/tab5/g.png' %}" alt="">
+          <h3>Continue with Google</h3>
+          
+      </div>
+
+      <h6>By continuing, you agree to Pinterest's <br> Terms of Service  and acknowledge that you've read <br> our Privacy Policy.Notice at collection.</h6>
+      <div class="log">
+        <h6>Already a member?</h6>
+    
+        <a href="/login">Login</a>
+
+      </div>
+     
+          
+      
+      
+      
+      </form>
+
+      </div>
+    
+</body>
+</html>
+
+    

@@ -1,0 +1,51 @@
+
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% load static %}
+   
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/editpin.css' %}">
+{%  endblock %}
+
+
+{% block title %}
+add product
+{% endblock %}
+
+
+{% block content %}
+
+
+<h1 style="width:max-content;margin:auto;font-family:Arial, Helvetica, sans-serif;margin-top:20px;margin-bottom:20px;">Edit Pin</h1>
+
+<hr>
+
+
+<form class="form" method="POST" enctype="multipart/form-data">
+
+{% csrf_token %}
+<div class="hor1">
+    <div class="s1">
+        {% render_field form.image class="form-control" %}
+    
+    </div>
+    <div class="s2">
+
+    </div>
+</div>
+
+
+{% render_field form.title placeholder="Add a title" class="form-control" %}
+
+{% render_field form.description placeholder="Add a detailed description" class="form-control" %}
+
+
+{% render_field form.url placeholder="Add a url" class="form-control" %}
+{% render_field form.board class="form-control" %}
+
+<!-- {{form.as_p}} -->
+<input class="btn btn-dark" type="submit" placeholder="Publish">
+
+</form>
+{% endblock %}

@@ -1,0 +1,84 @@
+.cardb{
+    margin: auto;
+    width: 570px;
+    height: 450px;
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.frm h2{color: rgb(0, 0, 0);
+    font-size: 25px;
+    font-weight: 400;
+    font-family: sans-serif;
+    
+    
+
+    width: max-content;
+    margin: auto;
+    margin-top: 30px !important;
+}
+
+
+    
+    .frm h3{color: rgb(0, 0, 0);
+        font-size: 15px;
+        font-weight: 700;
+        font-family: sans-serif;
+        
+        
+    
+        width: max-content;
+        margin: auto;
+        margin-top: 30px !important;
+        
+    
+    
+    }
+
+.frm label{
+    margin-left:30px !important;
+    margin-top: 50px;
+}
+
+.frm input{
+    margin-top: 25px;
+    width: 80%;
+    height: 35px;
+    border-radius: 25px;
+    border: 1px solid rgb(197, 197, 197);
+    margin-left:5px !important;
+    
+  
+
+
+
+}
+
+button{
+    width:80px !important;
+    border-radius: 45px !important;
+    background-color: rgb(201, 199, 199) !important;
+    color: rgb(90, 89, 89) !important;
+    margin-left: 420px;
+    margin-top: 50px;
+}
+
+.icn{
+    margin-left: 270px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+
+}
+
+.frm a{
+    width: 300px;
+    background-color: #e51010 !important;
+    color: white !important;
+    border-radius: 50px;
+
+}

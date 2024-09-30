@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/viewpin.css' %}">
+
+{%  endblock %}
+
+
+{% block title %}
+dashboard
+{% endblock %}
+
+
+
+{% block content %}
+
+ <div class="pin">
+    <div class="s1">
+        <img src="{{p.image.url}}" alt="">
+    </div>
+    <div class="s2">
+        
+
+      {% if request.user != p.user %}
+        <form action="/savepin/{{p.id}}">
+          <button >Save</button>
+        </form>
+      {% endif %}
+        
+        <a href="{{p.url}}"><h3 class="title1">{{p.title}}</h3></a>
+
+        
+
+        <h6>{{p.description}}</h6>
+
+
+        <hr>
+
+        
+        <a href="/viewprofile/{{pro.id}}">
+
+            <div class="sw1">
+
+                <img src="{{pro.image.url}}" style="width: 70px;height: 70px;border-radius:50%;">
+                <h2>{{pro.user.username}}</h2>
+            </div>
+
+       
+        </a>
+
+        {% if request.user == p.user %}
+            <div class="self">
+                <a href="/editpin/{{p.id}}" class="btn btn-outline-dark edit">Edit</a>
+                <a href="/deletepin/{{p.id}}" class="btn btn-outline-dark edit">Delete</a>
+
+            </div>
+           
+        {% endif %}
+
+    
+        
+        <h3>Comments</h3>
+        <div class="comment-div">
+          {% for i in comments %}
+        
+          <div class="card ">
+            <a href="/viewprofile/{{i.user.profile.id}}">
+              <div class="card-header">
+                <div class="s21">
+                    <img src="{{i.user.profile.image.url}}" style="width: 50px !important;height:50px !important;"   alt="">
+                    <h6>{{i.user.username}}</h6>
+                </div>
+                <div class="s22">
+                    <p class="card-text">{{i.comment}}</p>
+            
+                </div>
+                
+                
+              </div>
+            </a>
+            
+           
+          </div>
+        
+          {% endfor %}
+        
+        </div>
+ 
+        
+        <form method="post">
+          {% csrf_token %}
+              {{form}}
+              <br>
+              <input type="submit">
+        
+        
+        
+        </form>
+        
+        
+        
+        
+
+        
+        
+
+
+    </div>
+        
+  
+   
+
+</div>
+
+
+{% endblock %}
